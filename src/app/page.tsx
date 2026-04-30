@@ -13,7 +13,7 @@ export default function Home() {
         <ul className="flex gap-8">
           <li>
             <a href="#" className="font-semibold text-black dark:text-zinc-50 hover:text-blue-600 dark:hover:text-blue-400">
-              דף הבית
+             צור קשר
             </a>
           </li>
           <li>
@@ -23,7 +23,7 @@ export default function Home() {
           </li>
           <li>
             <a href="#" className="font-semibold text-black dark:text-zinc-50 hover:text-blue-600 dark:hover:text-blue-400">
-              צור קשר
+              דף הבית
             </a>
           </li>
         </ul>
