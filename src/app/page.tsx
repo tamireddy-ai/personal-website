@@ -99,25 +99,13 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 text-slate-900">
       <section className="mx-auto max-w-6xl px-6 py-16">
         <nav className="mb-20 flex items-center justify-between rounded-3xl bg-white/70 px-6 py-4 shadow-lg backdrop-blur">
-          <div className="text-xl font-black tracking-widest text-blue-700">TE</div>
-
-          <div className="flex gap-6 text-sm font-semibold text-slate-600">
-            <a href="#about" className="hover:text-blue-700">
-              About
-            </a>
-            <a href="#skills" className="hover:text-blue-700">
-              Skills
-            </a>
-            <a href="#experience" className="hover:text-blue-700">
-              Experience
-            </a>
-            <a href="#projects" className="hover:text-blue-700">
-              Projects
-            </a>
-            <a href="#contact" className="hover:text-blue-700">
-              Contact
-            </a>
-          </div>
+        <div className="flex gap-4 overflow-x-auto whitespace-nowrap text-sm font-semibold text-slate-600">
+  <a href="#about" className="hover:text-blue-700">About</a>
+  <a href="#skills" className="hover:text-blue-700">Skills</a>
+  <a href="#experience" className="hover:text-blue-700">Experience</a>
+  <a href="#projects" className="hover:text-blue-700">Projects</a>
+  <a href="#contact" className="hover:text-blue-700">Contact</a>
+</div>
         </nav>
 
         <div className="grid items-center gap-12 md:grid-cols-2">
