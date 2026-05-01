@@ -1,137 +1,89 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-blue-50 to-purple-100 text-gray-900 font-sans">
 
-      {/* NAV */}
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <div className="text-xl font-bold tracking-widest">TAMIR</div>
-        <div className="hidden gap-8 text-sm text-zinc-400 md:flex">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
+      <div className="max-w-6xl mx-auto px-6 py-16">
 
-      {/* HERO */}
-      <section className="mx-auto max-w-6xl px-6 py-24">
-        <p className="text-sm uppercase tracking-[0.4em] text-cyan-400 mb-4">
-          Portfolio
-        </p>
-
-        <h1 className="text-5xl md:text-7xl font-black leading-tight">
+        <h1 className="text-5xl font-bold mb-6">
           Tamir Eddy
-          <span className="block bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-            Hardware & Systems Engineer
-          </span>
         </h1>
 
-        <p className="mt-6 max-w-xl text-lg text-zinc-400">
-          Electrical & Electronics Engineering student specializing in Control Systems.
-          Strong background in hardware, communication systems and infrastructure.
+        <p className="text-xl mb-10 text-gray-600">
+          Hardware & Systems Engineer
         </p>
 
-        <div className="mt-8 flex gap-4 flex-wrap">
-          <a
-            href="https://www.linkedin.com/in/tamireddy/"
-            target="_blank"
-            className="px-6 py-3 rounded-full bg-white text-black font-semibold"
-          >
+        <div className="flex gap-4 mb-16">
+          <a href="https://www.linkedin.com/in/tamireddy/" target="_blank"
+            className="px-6 py-3 rounded-xl bg-blue-600 text-white hover:scale-105 transition">
             LinkedIn
           </a>
 
-          <a
-            href="https://github.com/tamireddy-ai"
-            target="_blank"
-            className="px-6 py-3 rounded-full border border-zinc-700"
-          >
+          <a href="https://github.com/tamireddy-ai" target="_blank"
+            className="px-6 py-3 rounded-xl border border-gray-300 hover:scale-105 transition">
             GitHub
           </a>
 
-          <a
-            href="/Tamir_Eddy_CV.pdf"
-            target="_blank"
-            className="px-6 py-3 rounded-full border border-cyan-400 text-cyan-400"
-          >
+          <a href="/cv.pdf" target="_blank"
+            className="px-6 py-3 rounded-xl bg-purple-600 text-white hover:scale-110 transition shadow-lg">
             Download CV
           </a>
         </div>
-      </section>
 
-      {/* ABOUT */}
-      <section id="about" className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="text-3xl font-bold mb-6">About</h2>
+        {/* CV CARD */}
+        <div className="mb-16">
+          <div className="card cursor-pointer"
+               onClick={() => window.open('/cv.pdf', '_blank')}>
+            <h3>My Resume</h3>
+            <p>Click to view or download my full CV</p>
+          </div>
+        </div>
 
-        <p className="text-zinc-400 leading-8 max-w-3xl">
-          I combine academic knowledge in Electrical Engineering with real-world
-          experience from the IDF ICT Corps. I specialize in system integration,
-          troubleshooting complex infrastructures and improving operational systems.
-        </p>
-      </section>
+        <div className="grid md:grid-cols-3 gap-6">
 
-      {/* EXPERIENCE */}
-      <section id="experience" className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="text-3xl font-bold mb-10">Experience</h2>
-
-        <div className="grid gap-6">
-
-          <div className="p-6 rounded-2xl border border-zinc-800 bg-zinc-950">
-            <h3 className="text-xl font-bold">Network Technician & IT Commander | IDF</h3>
-            <p className="text-zinc-400 mt-2">2023 – Present</p>
-
-            <ul className="mt-4 text-zinc-400 space-y-2">
-              <li>Managed critical communication and computing infrastructure</li>
-              <li>Led technical team and ensured system availability</li>
-              <li>Performed advanced troubleshooting under pressure</li>
-            </ul>
+          <div className="card">
+            <h3>Systems</h3>
+            <p>Embedded, hardware integration, real-time systems</p>
           </div>
 
-          <div className="p-6 rounded-2xl border border-zinc-800 bg-zinc-950">
-            <h3 className="text-xl font-bold">Deputy Company Commander | Givati</h3>
-            <p className="text-zinc-400 mt-2">2019 – 2023</p>
+          <div className="card">
+            <h3>Development</h3>
+            <p>Python, MATLAB, automation, data pipelines</p>
+          </div>
 
-            <ul className="mt-4 text-zinc-400 space-y-2">
-              <li>Led operations for 100+ personnel</li>
-              <li>Coordinated teams and improved performance</li>
-            </ul>
+          <div className="card">
+            <h3>Data</h3>
+            <p>Analysis, optimization, decision support</p>
           </div>
 
         </div>
-      </section>
 
-      {/* PROJECTS */}
-      <section id="projects" className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="text-3xl font-bold mb-10">Projects</h2>
+      </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+      <style jsx>{`
+        .card {
+          padding: 24px;
+          border-radius: 16px;
+          background: white;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+          transition: all 0.3s ease;
+        }
 
-          <div className="p-6 rounded-2xl border border-zinc-800 bg-zinc-950">
-            <h3 className="text-xl font-bold">Massuah C4I System Upgrade</h3>
-            <p className="text-zinc-400 mt-3">
-              Led upgrade of mission-critical operational system, improving stability
-              and performance across field units.
-            </p>
-          </div>
+        .card:hover {
+          transform: translateY(-10px) scale(1.05);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
 
-          <div className="p-6 rounded-2xl border border-zinc-800 bg-zinc-950">
-            <h3 className="text-xl font-bold">System Logic Optimization</h3>
-            <p className="text-zinc-400 mt-3">
-              Improved system logic and workflows, enhancing efficiency and response time.
-            </p>
-          </div>
+        h3 {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 8px;
+        }
 
-        </div>
-      </section>
+        p {
+          color: #555;
+        }
+      `}</style>
 
-      {/* CONTACT */}
-      <section id="contact" className="mx-auto max-w-6xl px-6 py-20 text-center">
-        <h2 className="text-4xl font-bold">Contact</h2>
-
-        <p className="mt-4 text-zinc-400">
-          tamireddy@gmail.com
-        </p>
-      </section>
-
-    </main>
+    </div>
   );
 }
