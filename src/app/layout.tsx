@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       siteName: "Tamir Eddy Portfolio",
       images: [
         {
-          url: "/image.png",
+          url: "https://tamir-eddy.vercel.app/image.png",
           width: 1200,
           height: 630,
         },
