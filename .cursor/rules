@@ -1,0 +1,35 @@
+Project rules
+
+Use Next.js with React components.
+
+Use Tailwind CSS for styling.
+
+Keep the design clean, modern and responsive.
+
+Use max-w-6xl px-6 py-16 for main sections.
+
+Use rounded-3xl or rounded-[2rem] for cards.
+
+Use shadow-lg, shadow-xl or shadow-2xl for depth.
+
+Use transition and hover:-translate-y for interactive elements.
+
+Use blue, violet, cyan and slate colors.
+
+Keep text readable on mobile.
+
+Use grid with md:grid-cols-2 or md:grid-cols-4 for responsive layout.
+
+Use clear section ids:
+about
+skills
+experience
+projects
+
+Keep buttons visible and clickable on mobile.
+
+Every external link must include target="_blank".
+
+Do not add unused code.
+
+Do not remove existing content unless asked.

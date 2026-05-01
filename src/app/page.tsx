@@ -10,6 +10,7 @@ export default function Home() {
             <a href="#skills" className="hover:text-blue-700">Skills</a>
             <a href="#experience" className="hover:text-blue-700">Experience</a>
             <a href="#projects" className="hover:text-blue-700">Projects</a>
+            <a href="#contact" className="hover:text-blue-700">Contact</a>
           </div>
         </nav>
 
@@ -166,7 +167,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="mx-auto max-w-6xl px-6 py-16 pb-28">
+      <section id="projects" className="mx-auto max-w-6xl px-6 py-16">
         <p className="mb-4 text-sm font-bold uppercase tracking-[0.4em] text-blue-600">
           Projects
         </p>
@@ -187,6 +188,53 @@ export default function Home() {
             <p className="mt-4 leading-8 text-slate-600">
               Built and deployed a responsive portfolio using Next.js, GitHub and Vercel.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="mx-auto max-w-6xl px-6 py-16 pb-28">
+        <div className="rounded-[2rem] bg-white p-10 shadow-xl transition hover:-translate-y-2">
+          <p className="mb-4 text-sm font-bold uppercase tracking-[0.4em] text-blue-600">
+            Contact
+          </p>
+
+          <h2 className="text-4xl font-black mb-4">
+            Let’s get in touch
+          </h2>
+
+          <p className="mt-4 max-w-4xl text-lg leading-8 text-slate-600">
+            I am an Electrical and Electronics Engineering student at HIT, focused on control systems, hardware and system reliability.
+          </p>
+          <p className="mt-4 max-w-4xl text-lg leading-8 text-slate-600">
+            I am open to internships and student roles in hardware, systems and QA.
+          </p>
+
+          <p className="mt-8 font-semibold text-slate-700">
+            Feel free to reach out. I respond quickly.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="https://www.linkedin.com/in/tamireddy/"
+              target="_blank"
+              className="rounded-2xl bg-blue-600 px-7 py-3 font-bold text-white shadow-lg transition hover:-translate-y-2 hover:shadow-2xl"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/tamireddy-ai"
+              target="_blank"
+              className="rounded-2xl bg-white px-7 py-3 font-bold text-slate-900 shadow-lg transition hover:-translate-y-2 hover:shadow-2xl"
+            >
+              GitHub
+            </a>
+            <a
+              href="mailto:tamireddy@gmail.com"
+              className="rounded-2xl bg-slate-900 px-7 py-3 font-bold text-white shadow-lg transition hover:-translate-y-2 hover:shadow-2xl"
+            >
+              Email
+            </a>
           </div>
         </div>
       </section>
