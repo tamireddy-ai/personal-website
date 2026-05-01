@@ -1,4 +1,100 @@
+"use client";
+
+import { FormEvent, useMemo, useState } from "react";
+
+type ChatMessage = {
+  role: "user" | "bot";
+  text: string;
+};
+
+const CHAT_SUGGESTIONS = [
+  "Who is Tamir Eddy?",
+  "What is his experience in ICT Corps IDF?",
+  "Which projects are featured?",
+];
+
+function getBotReply(input: string): string {
+  const normalized = input.toLowerCase();
+
+  if (normalized.includes("tamir") || normalized.includes("who") || normalized.includes("about")) {
+    return "Tamir Eddy is an Electrical and Electronics Engineering student at HIT, focused on Control Systems.";
+  }
+
+  if (
+    normalized.includes("hit") ||
+    normalized.includes("electrical") ||
+    normalized.includes("electronics")
+  ) {
+    return "He studies Electrical and Electronics Engineering at HIT with a practical, systems-oriented approach.";
+  }
+
+  if (normalized.includes("control")) {
+    return "His specialization is Control Systems, with emphasis on stability and reliable operation.";
+  }
+
+  if (normalized.includes("hardware")) {
+    return "He has hands-on experience in hardware integration and field-level technical troubleshooting.";
+  }
+
+  if (normalized.includes("network")) {
+    return "He managed communication and computing infrastructure, including network operations and support.";
+  }
+
+  if (normalized.includes("qa") || normalized.includes("testing")) {
+    return "He applies a strong QA mindset: structured troubleshooting, reliability focus, and continuous improvement.";
+  }
+
+  if (
+    normalized.includes("experience") ||
+    normalized.includes("work") ||
+    normalized.includes("idf") ||
+    normalized.includes("ict corps")
+  ) {
+    return "He served in ICT Corps IDF as a Network Technician and IT Department Commander, leading teams and maintaining mission-critical systems.";
+  }
+
+  if (normalized.includes("operational system") || normalized.includes("upgrade")) {
+    return "Operational System Upgrade: he led a technical C4I system upgrade to improve stability, logic, and workflow.";
+  }
+
+  if (
+    normalized.includes("project") ||
+    normalized.includes("portfolio website") ||
+    normalized.includes("personal portfolio")
+  ) {
+    return "Featured projects are the Operational System Upgrade and the Personal Portfolio Website built with Next.js, GitHub, and Vercel.";
+  }
+
+  return "I can answer About, Experience, and Projects questions. Try: Tamir Eddy, HIT studies, ICT Corps IDF, or featured projects.";
+}
+
 export default function Home() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [input, setInput] = useState("");
+  const [messages, setMessages] = useState<ChatMessage[]>([
+    {
+      role: "bot",
+      text: "Hi, I am Tamir's site assistant. Ask me about his background, experience, or projects.",
+    },
+  ]);
+
+  const canSend = useMemo(() => input.trim().length > 0, [input]);
+
+  const sendMessage = (text: string) => {
+    const trimmed = text.trim();
+    if (!trimmed) return;
+
+    const userMessage: ChatMessage = { role: "user", text: trimmed };
+    const botMessage: ChatMessage = { role: "bot", text: getBotReply(trimmed) };
+    setMessages((prev) => [...prev, userMessage, botMessage]);
+    setInput("");
+  };
+
+  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    sendMessage(input);
+  };
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 text-slate-900">
       <section className="mx-auto max-w-6xl px-6 py-16">
@@ -246,6 +342,74 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <button
+        type="button"
+        onClick={() => setIsChatOpen((prev) => !prev)}
+        aria-label={isChatOpen ? "Close chat" : "Open chat"}
+        className="fixed right-6 bottom-6 z-50 rounded-full bg-blue-600 px-6 py-4 text-sm font-bold text-white shadow-2xl transition hover:-translate-y-1 hover:bg-blue-700"
+      >
+        {isChatOpen ? "Close Chat" : "Chat"}
+      </button>
+
+      {isChatOpen ? (
+        <div className="fixed right-6 bottom-24 z-50 w-[calc(100vw-3rem)] max-w-sm rounded-[2rem] bg-white p-4 shadow-2xl">
+          <div className="mb-3 flex items-center justify-between">
+            <p className="text-sm font-bold tracking-[0.2em] text-blue-600 uppercase">Site Chat</p>
+            <button
+              type="button"
+              onClick={() => setIsChatOpen(false)}
+              className="rounded-xl bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:bg-slate-200"
+            >
+              Close
+            </button>
+          </div>
+
+          <div className="h-64 space-y-3 overflow-y-auto rounded-2xl bg-slate-50 p-3">
+            {messages.map((message, index) => (
+              <div
+                key={`${message.role}-${index}`}
+                className={`max-w-[90%] rounded-2xl px-3 py-2 text-sm leading-6 shadow ${
+                  message.role === "user"
+                    ? "ml-auto bg-blue-600 text-white"
+                    : "bg-white text-slate-700"
+                }`}
+              >
+                {message.text}
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-3 flex flex-wrap gap-2">
+            {CHAT_SUGGESTIONS.map((suggestion) => (
+              <button
+                key={suggestion}
+                type="button"
+                onClick={() => sendMessage(suggestion)}
+                className="rounded-xl bg-violet-50 px-3 py-1.5 text-xs font-semibold text-violet-700 transition hover:-translate-y-0.5 hover:bg-violet-100"
+              >
+                {suggestion}
+              </button>
+            ))}
+          </div>
+
+          <form onSubmit={onSubmit} className="mt-3 flex gap-2">
+            <input
+              value={input}
+              onChange={(event) => setInput(event.target.value)}
+              placeholder="Ask about About, Experience, or Projects..."
+              className="w-full rounded-2xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 transition outline-none focus:border-blue-400"
+            />
+            <button
+              type="submit"
+              disabled={!canSend}
+              className="rounded-2xl bg-cyan-600 px-4 py-2 text-sm font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-cyan-700 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              Send
+            </button>
+          </form>
+        </div>
+      ) : null}
     </main>
   );
 }

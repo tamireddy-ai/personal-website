@@ -16,21 +16,20 @@ export const metadata: Metadata = {
   title: "Tamir Eddy | Electrical Engineering Student",
   description:
     "Electrical and Electronics Engineering student specializing in control systems, hardware and system reliability. Experience in IT, networks and QA.",
-    openGraph: {
-      title: "Tamir Eddy Portfolio",
-      description:
-        "Hardware, systems and QA focused engineering student with real field experience.",
-        url: "https://tamir-eddy.vercel.app",
-      siteName: "Tamir Eddy Portfolio",
-      images: [
-        {
-          url: "https://tamir-eddy.vercel.app/image.png",
-          width: 1200,
-          height: 630,
-        },
-      ],
-      type: "website",
-    },
+  openGraph: {
+    title: "Tamir Eddy Portfolio",
+    description: "Hardware, systems and QA focused engineering student with real field experience.",
+    url: "https://tamir-eddy.vercel.app",
+    siteName: "Tamir Eddy Portfolio",
+    images: [
+      {
+        url: "https://tamir-eddy.vercel.app/image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
 };
 export default function RootLayout({
   children,
