@@ -6,21 +6,31 @@ export default function Home() {
           <div className="text-xl font-black tracking-widest text-blue-700">TE</div>
 
           <div className="flex gap-6 text-sm font-semibold text-slate-600">
-            <a href="#about" className="hover:text-blue-700">About</a>
-            <a href="#skills" className="hover:text-blue-700">Skills</a>
-            <a href="#experience" className="hover:text-blue-700">Experience</a>
-            <a href="#projects" className="hover:text-blue-700">Projects</a>
-            <a href="#contact" className="hover:text-blue-700">Contact</a>
+            <a href="#about" className="hover:text-blue-700">
+              About
+            </a>
+            <a href="#skills" className="hover:text-blue-700">
+              Skills
+            </a>
+            <a href="#experience" className="hover:text-blue-700">
+              Experience
+            </a>
+            <a href="#projects" className="hover:text-blue-700">
+              Projects
+            </a>
+            <a href="#contact" className="hover:text-blue-700">
+              Contact
+            </a>
           </div>
         </nav>
 
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div>
-            <p className="mb-4 text-sm font-bold uppercase tracking-[0.4em] text-blue-600">
+            <p className="mb-4 text-sm font-bold tracking-[0.4em] text-blue-600 uppercase">
               Portfolio
             </p>
 
-            <h1 className="text-5xl font-black leading-tight md:text-7xl">
+            <h1 className="text-5xl leading-tight font-black md:text-7xl">
               Tamir Eddy
               <span className="block bg-gradient-to-r from-blue-600 via-violet-600 to-cyan-500 bg-clip-text text-transparent">
                 Hardware & Systems Engineer
@@ -29,33 +39,42 @@ export default function Home() {
 
             <p className="mt-6 text-lg leading-8 text-slate-600">
               Electrical and Electronics Engineering student specializing in Control Systems.
-              Experienced in hardware integration, communication infrastructure,
-              troubleshooting, QA thinking and technical leadership.
+              Experienced in hardware integration, communication infrastructure, troubleshooting, QA
+              thinking and technical leadership.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <a href="https://www.linkedin.com/in/tamireddy/" target="_blank" className="rounded-2xl bg-blue-600 px-7 py-3 font-bold text-white shadow-lg transition hover:-translate-y-2 hover:shadow-2xl">
+              <a
+                href="https://www.linkedin.com/in/tamireddy/"
+                target="_blank"
+                className="rounded-2xl bg-blue-600 px-7 py-3 font-bold text-white shadow-lg transition hover:-translate-y-2 hover:shadow-2xl"
+              >
                 LinkedIn
               </a>
 
-              <a href="https://github.com/tamireddy-ai" target="_blank" className="rounded-2xl bg-white px-7 py-3 font-bold text-slate-900 shadow-lg transition hover:-translate-y-2 hover:shadow-2xl">
+              <a
+                href="https://github.com/tamireddy-ai"
+                target="_blank"
+                className="rounded-2xl bg-white px-7 py-3 font-bold text-slate-900 shadow-lg transition hover:-translate-y-2 hover:shadow-2xl"
+              >
                 GitHub
               </a>
 
-              <a href="mailto:tamireddy@gmail.com" className="rounded-2xl bg-slate-900 px-7 py-3 font-bold text-white shadow-lg transition hover:-translate-y-2 hover:shadow-2xl">
+              <a
+                href="mailto:tamireddy@gmail.com"
+                className="rounded-2xl bg-slate-900 px-7 py-3 font-bold text-white shadow-lg transition hover:-translate-y-2 hover:shadow-2xl"
+              >
                 Email
               </a>
             </div>
           </div>
 
           <div className="rounded-[2rem] bg-white/80 p-8 shadow-2xl backdrop-blur transition hover:-translate-y-3">
-            <p className="text-sm font-bold uppercase tracking-[0.3em] text-slate-500">
+            <p className="text-sm font-bold tracking-[0.3em] text-slate-500 uppercase">
               Current Focus
             </p>
 
-            <h2 className="mt-4 text-3xl font-black">
-              Hardware, Systems, QA & Automation
-            </h2>
+            <h2 className="mt-4 text-3xl font-black">Hardware, Systems, QA & Automation</h2>
 
             <div className="mt-8 grid grid-cols-2 gap-4">
               <div className="rounded-3xl bg-blue-50 p-6 text-center transition hover:-translate-y-2 hover:shadow-xl">
@@ -84,9 +103,7 @@ export default function Home() {
 
       <section id="about" className="mx-auto max-w-6xl px-6 py-16">
         <div className="rounded-[2rem] bg-white p-10 shadow-xl transition hover:-translate-y-2">
-          <p className="mb-4 text-sm font-bold uppercase tracking-[0.4em] text-blue-600">
-            About
-          </p>
+          <p className="mb-4 text-sm font-bold tracking-[0.4em] text-blue-600 uppercase">About</p>
 
           <h2 className="text-4xl font-black">
             Engineering student with field technical experience.
@@ -94,17 +111,15 @@ export default function Home() {
 
           <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-600">
             I study Electrical and Electronics Engineering at HIT, specializing in Control Systems.
-            My background includes managing communication and computing infrastructure,
-            solving hardware and software issues under pressure, leading technical teams,
-            and supporting mission-critical systems.
+            My background includes managing communication and computing infrastructure, solving
+            hardware and software issues under pressure, leading technical teams, and supporting
+            mission-critical systems.
           </p>
         </div>
       </section>
 
       <section id="skills" className="mx-auto max-w-6xl px-6 py-16">
-        <p className="mb-4 text-sm font-bold uppercase tracking-[0.4em] text-blue-600">
-          Skills
-        </p>
+        <p className="mb-4 text-sm font-bold tracking-[0.4em] text-blue-600 uppercase">Skills</p>
 
         <h2 className="mb-8 text-4xl font-black">Technical stack</h2>
 
@@ -123,7 +138,10 @@ export default function Home() {
             "Excel",
             "System Support",
           ].map((skill) => (
-            <div key={skill} className="rounded-3xl bg-white p-5 text-center font-bold shadow-lg transition hover:-translate-y-3 hover:bg-blue-600 hover:text-white hover:shadow-2xl">
+            <div
+              key={skill}
+              className="rounded-3xl bg-white p-5 text-center font-bold shadow-lg transition hover:-translate-y-3 hover:bg-blue-600 hover:text-white hover:shadow-2xl"
+            >
               {skill}
             </div>
           ))}
@@ -131,7 +149,7 @@ export default function Home() {
       </section>
 
       <section id="experience" className="mx-auto max-w-6xl px-6 py-16">
-        <p className="mb-4 text-sm font-bold uppercase tracking-[0.4em] text-blue-600">
+        <p className="mb-4 text-sm font-bold tracking-[0.4em] text-blue-600 uppercase">
           Experience
         </p>
 
@@ -139,38 +157,31 @@ export default function Home() {
 
         <div className="grid gap-6">
           <div className="rounded-[2rem] bg-white p-8 shadow-xl transition hover:-translate-y-3 hover:shadow-2xl">
-            <h3 className="text-2xl font-black">
-              Network Technician & IT Department Commander
-            </h3>
+            <h3 className="text-2xl font-black">Network Technician & IT Department Commander</h3>
             <p className="mt-2 font-bold text-blue-700">ICT Corps, IDF</p>
             <p className="mt-1 text-slate-500">2023 to Today</p>
 
             <p className="mt-5 max-w-4xl leading-8 text-slate-600">
-              Managed communication and computing infrastructure, led a technical team,
-              handled troubleshooting under pressure, and maintained operational readiness
-              for critical systems.
+              Managed communication and computing infrastructure, led a technical team, handled
+              troubleshooting under pressure, and maintained operational readiness for critical
+              systems.
             </p>
           </div>
 
           <div className="rounded-[2rem] bg-white p-8 shadow-xl transition hover:-translate-y-3 hover:shadow-2xl">
-            <h3 className="text-2xl font-black">
-              Technical Lead, Massuah C4I System Upgrade
-            </h3>
+            <h3 className="text-2xl font-black">Technical Lead, Massuah C4I System Upgrade</h3>
             <p className="mt-2 font-bold text-violet-700">Command & Control System</p>
 
             <p className="mt-5 max-w-4xl leading-8 text-slate-600">
-              Managed an end-to-end technical upgrade of an operational system,
-              improved stability, optimized logic, and coordinated requirements
-              between field users and technical teams.
+              Managed an end-to-end technical upgrade of an operational system, improved stability,
+              optimized logic, and coordinated requirements between field users and technical teams.
             </p>
           </div>
         </div>
       </section>
 
       <section id="projects" className="mx-auto max-w-6xl px-6 py-16">
-        <p className="mb-4 text-sm font-bold uppercase tracking-[0.4em] text-blue-600">
-          Projects
-        </p>
+        <p className="mb-4 text-sm font-bold tracking-[0.4em] text-blue-600 uppercase">Projects</p>
 
         <h2 className="mb-8 text-4xl font-black">Things I built and improved</h2>
 
@@ -178,8 +189,8 @@ export default function Home() {
           <div className="rounded-[2rem] bg-white p-8 shadow-xl transition hover:-translate-y-3 hover:shadow-2xl">
             <h3 className="text-2xl font-black">Operational System Upgrade</h3>
             <p className="mt-4 leading-8 text-slate-600">
-              Improved a mission-critical C4I system through technical upgrades,
-              logic optimization and workflow improvement.
+              Improved a mission-critical C4I system through technical upgrades, logic optimization
+              and workflow improvement.
             </p>
           </div>
 
@@ -195,16 +206,13 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="mx-auto max-w-6xl px-6 py-16 pb-28">
         <div className="rounded-[2rem] bg-white p-10 shadow-xl transition hover:-translate-y-2">
-          <p className="mb-4 text-sm font-bold uppercase tracking-[0.4em] text-blue-600">
-            Contact
-          </p>
+          <p className="mb-4 text-sm font-bold tracking-[0.4em] text-blue-600 uppercase">Contact</p>
 
-          <h2 className="text-4xl font-black mb-4">
-            Let’s get in touch
-          </h2>
+          <h2 className="mb-4 text-4xl font-black">Let’s get in touch</h2>
 
           <p className="mt-4 max-w-4xl text-lg leading-8 text-slate-600">
-            I am an Electrical and Electronics Engineering student at HIT, focused on control systems, hardware and system reliability.
+            I am an Electrical and Electronics Engineering student at HIT, focused on control
+            systems, hardware and system reliability.
           </p>
           <p className="mt-4 max-w-4xl text-lg leading-8 text-slate-600">
             I am open to internships and student roles in hardware, systems and QA.
